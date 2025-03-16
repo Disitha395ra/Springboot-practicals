@@ -6,7 +6,17 @@ You must use inhertance, polymorphism, encapuslation...
  */
 
  /*
-  * 
+  * Abstract class එකක් කියවීමේදී, එහි abstract method එකක් හෝ ගොඩක් method තිබිය හැක.
+ Abstract method එකක් කියන්නේ කිසිම body එකක් නැති method එකක්.
+ 
+ උදාහරණයක්:
+ 
+ java
+ Copy code
+ abstract void run();
+ ඔබ abstract method එකක් සාදන්නේ නම්, එය ඇතුළත් class එක නිවාරණයෙන් (automatically) abstract class එකක් බවට පත්විය යුතුය.
+ 
+ තවද, abstract class එකකට object එකක් create කරන්න බැහැ.
   
   */
 import java.util.*;
@@ -87,8 +97,8 @@ class Library{
     }
 
     public void displayBooks(){
-        for(Book book:books){
-            book.displayinfo();
+        for(Book bookr:books){
+            bookr.displayinfo();
         }
     }
 }
