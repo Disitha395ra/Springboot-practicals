@@ -28,3 +28,39 @@ Package → A folder structure inside your project for organizing Java classes.
 Organization → A unique name representing your company or personal space in project naming.
 
 Group ID → Used in project dependencies to uniquely identify your project.
+
+
+//////////////////////////////////////
+example project structure
+
+my-spring-boot-app/   <-- Project Root
+│── src/
+│   ├── main/
+│   │   ├── java/com/example/app/
+│   │   │   ├── controllers/        <-- Package for Controller classes
+│   │   │   │   ├── UserController.java
+│   │   │   │   ├── ProductController.java
+│   │   │   │  
+│   │   │   ├── services/           <-- Package for Service classes
+│   │   │   │   ├── UserService.java
+│   │   │   │   ├── ProductService.java
+│   │   │   │  
+│   │   │   ├── repositories/       <-- Package for Repository classes
+│   │   │   │   ├── UserRepository.java
+│   │   │   │   ├── ProductRepository.java
+│   │   │   │  
+│   │   │   ├── models/             <-- Package for Model (Entity) classes
+│   │   │   │   ├── User.java
+│   │   │   │   ├── Product.java
+│   │   │   │  
+│   │   │   ├── MySpringBootApp.java  <-- Main class (Application Starter)
+│   │   │  
+│   ├── resources/
+│   │   ├── static/         <-- Static files (CSS, JS, images)
+│   │   ├── templates/      <-- HTML templates (if using Thymeleaf)
+│   │   ├── application.properties  <-- Configuration file
+│   │  
+│   ├── test/              <-- Test cases for the application
+│  
+├── pom.xml                <-- Maven dependencies (for Maven projects)
+├── build.gradle           <-- Dependencies (for Gradle projects)
