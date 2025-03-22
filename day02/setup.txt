@@ -1,0 +1,4 @@
+Download Springtool kit 
+Create new packeges
+Initial setups for development 
+Environment configuration
