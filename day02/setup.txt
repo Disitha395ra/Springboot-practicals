@@ -2,3 +2,23 @@ Download Springtool kit
 Create new packeges
 Initial setups for development 
 Environment configuration
+
+
+///////////////////////////////////
+1.What is a Package in Java and Spring Boot?
+A package in Java is a way to organize your code. 
+It is like a folder that groups related classes together.
+
+📌 Why do we declare it always?
+Every Java file starts with a 
+package declaration (except for default packages). 
+This tells Java where this file belongs in the project structure.
+
+
+2. What is Organization in Spring Boot?
+The organization refers to the name of 
+your company, team, or personal namespace that is used when creating a package.
+
+3. What is Group in Spring Boot?
+The Group ID in Spring Boot is used to uniquely identify your project. 
+It usually follows the format of an organization name
