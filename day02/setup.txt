@@ -64,3 +64,31 @@ my-spring-boot-app/   <-- Project Root
 │  
 ├── pom.xml                <-- Maven dependencies (for Maven projects)
 ├── build.gradle           <-- Dependencies (for Gradle projects)
+
+
+////////////////////////////////////////////////////////
+
+🛑 1. Controller (Waiter) – Takes Requests
+The Controller is like the waiter in a restaurant.
+
+It takes the user's request and gives it to the Service.
+
+Then it takes the Service's response and gives it back to the user.
+
+////////////////////////////////////////////////////////
+
+🔥 2. Service (Chef) – Business Logic
+The Service is like the chef in a restaurant.
+
+It prepares the data (business logic).
+
+The Controller (Waiter) asks the Service (Chef) for data
+
+//////////////////////////////////////////////////////
+
+📄 3. Model (Menu) – Defines Data Structure
+The Model is like the menu in a restaurant.
+
+It defines what kind of data exists (like User details).
+
+If using a database, this class will define what the table looks like.
