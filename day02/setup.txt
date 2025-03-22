@@ -22,3 +22,9 @@ your company, team, or personal namespace that is used when creating a package.
 3. What is Group in Spring Boot?
 The Group ID in Spring Boot is used to uniquely identify your project. 
 It usually follows the format of an organization name
+////////////////////////////////////
+Package → A folder structure inside your project for organizing Java classes.
+
+Organization → A unique name representing your company or personal space in project naming.
+
+Group ID → Used in project dependencies to uniquely identify your project.
