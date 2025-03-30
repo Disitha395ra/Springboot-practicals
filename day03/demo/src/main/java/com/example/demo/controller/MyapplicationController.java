@@ -2,7 +2,9 @@ package com.example.demo.controller;
 
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -68,11 +70,16 @@ public class MyapplicationController {
     public java.util.List<Student> findStudentsByAgeRange() {
         return students.stream()
                 .filter(student -> student.getAge() >= 20 && student.getAge() <= 23)
-                .collect(Collector.toList());
+                .collect(Collectors.toList());
     }
 	
 	//sorts the students by their GPA
-	
+	@GetMapping("/students/sorted-by-gpa")
+    public java.util.List<Student> sortStudentsByGPA() {
+        return students.stream()
+                .sorted(Comparator.comparingDouble(Student::getGpa).reversed())
+                .collect(Collectors.toList());
+    }
 	
 	//create CRUD opperations for students
 }
