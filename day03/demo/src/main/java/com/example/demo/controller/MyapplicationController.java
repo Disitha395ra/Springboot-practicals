@@ -42,6 +42,16 @@ public class MyapplicationController {
 	}
 	
 	//return all the students using proper datastructure
+	public java.util.List<Student> getAllStudent(){
+		return students;
+	}
 	
-	
+	public Student findStudent(@PathVariable("regNo") String regNo) {
+		for(Student student : students) {
+			if(student.getRegNo().equals(regNo)) {
+				return student;
+			}
+		}
+		return null;
+	}
 }
