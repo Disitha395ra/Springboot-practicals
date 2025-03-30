@@ -5,9 +5,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.model.Student;
 @RestController
 @RequestMapping("/app")
 public class MyapplicationController {
+	
+	Student Bob = new Student("2020/ICT/23","Bob",23,"IT",1.0);
 	
 	@GetMapping("/msg")
 	public String mymsg() {
