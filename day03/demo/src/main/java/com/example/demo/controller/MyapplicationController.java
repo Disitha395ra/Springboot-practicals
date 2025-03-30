@@ -2,16 +2,20 @@ package com.example.demo.controller;
 
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.stream.Collector;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import com.example.demo.DemoApplication;
 import com.example.demo.model.Student;
+
 @RestController
 @RequestMapping("/app")
 public class MyapplicationController {
+
+    private final DemoApplication demoApplication;
 	
 	Student Bob = new Student("2020/ICT/113","Bob",23,"IT",1.0);
 	Student Naml = new Student("2020/ICT/12","Naml",24,"AMC",2.0);
@@ -19,6 +23,10 @@ public class MyapplicationController {
 	Student Kasun = new Student("2020/ICT/110","Kasun",21,"TECH",1.4);
 	
 	java.util.List<Student> students = new ArrayList<Student>();
+
+    MyapplicationController(DemoApplication demoApplication) {
+        this.demoApplication = demoApplication;
+    }
 	
 	@GetMapping("/msg")
 	public String mymsg() {
@@ -56,7 +64,12 @@ public class MyapplicationController {
 	}
 	
 	//find the students whoose age is between 20 and 23
-	
+	@GetMapping("/students/age-range")
+    public java.util.List<Student> findStudentsByAgeRange() {
+        return students.stream()
+                .filter(student -> student.getAge() >= 20 && student.getAge() <= 23)
+                .collect(Collector.toList());
+    }
 	
 	//sorts the students by their GPA
 	
