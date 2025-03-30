@@ -54,4 +54,12 @@ public class MyapplicationController {
 		}
 		return null;
 	}
+	
+	//find the students whoose age is between 20 and 23
+	
+	
+	//sorts the students by their GPA
+	
+	
+	//create CRUD opperations for students
 }
