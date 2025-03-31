@@ -71,12 +71,17 @@ public class MyapplicationController {
 	}
 	
 	//find the students whoose age is between 20 and 23
-	@GetMapping("/students/age-range")
-    public java.util.List<Student> findStudentsByAgeRange() {
-        return students.stream()
-                .filter(student -> student.getAge() >= 20 && student.getAge() <= 23)
-                .collect(Collectors.toList());
-    }
+	@GetMapping("/findbyagerange/{min}/{max}")
+	public List<Student> findstudentbyagerange(@PathVariable("min") int min, @PathVariable("max") int max) {
+		List<Student> filteredStudents = new ArrayList<>();
+		for(Student student:students) {
+			if(student.getAge() >= min && student.getAge() <= max) {
+				
+				filteredStudents.add(student);
+			}
+		}
+		return filteredStudents;
+	}
 	
 	//sorts the students by their GPA
 	@GetMapping("/students/sorted-by-gpa")
