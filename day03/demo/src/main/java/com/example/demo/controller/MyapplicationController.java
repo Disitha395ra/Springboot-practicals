@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -113,6 +114,12 @@ public class Myapplicationcontroller {
 	}
 	
 	//Delete Student
+	//Delete Student
+	@DeleteMapping("/studentdelete/{regNo}")
+	public String deleteStudent(@PathVariable String regNo) {
+		students.removeIf(student -> student.getRegNo().equals(regNo));
+		return "Student deleted successfully";
+	}
 	
 	
 
