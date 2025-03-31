@@ -84,12 +84,13 @@ public class MyapplicationController {
 	}
 	
 	//sorts the students by their GPA
-	@GetMapping("/students/sorted-by-gpa")
-    public java.util.List<Student> sortStudentsByGPA() {
-        return students.stream()
-                .sorted(Comparator.comparingDouble(Student::getGpa).reversed())
-                .collect(Collectors.toList());
-    }
+	//sort student by their gpa
+	@GetMapping("/students/sortbygpa")
+	public List<Student> sortbygpa(){
+		return students.stream()
+				.sorted(Comparator.comparingDouble(Student::getGpa))
+				.collect(Collectors.toList());
+	}
 	
 	//create CRUD opperations for students
 }
