@@ -52,14 +52,17 @@ public class MyapplicationController {
 	public Student getStudent() {
 		return Bob;
 	}
-	
-	//return all the students using proper datastructure
-	public java.util.List<Student> getAllStudent(){
+
+	//print all student
+	@GetMapping("/allstudents")
+	public List<Student>getAllStudent(){
 		return students;
 	}
 	
-	public Student findStudent(@PathVariable("regNo") String regNo) {
-		for(Student student : students) {
+	//return all the students using proper datastructure
+	@GetMapping("/findbyregno/{regNo}")
+	public Student findstudentbyregNo(@PathVariable("regNo") String regNo){
+		for(Student student:students) {
 			if(student.getRegNo().equals(regNo)) {
 				return student;
 			}
