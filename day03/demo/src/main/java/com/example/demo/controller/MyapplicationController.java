@@ -26,10 +26,11 @@ public class MyapplicationController {
 	
 	java.util.List<Student> students = new ArrayList<Student>();
 
-    MyapplicationController(DemoApplication demoApplication) {
-        this.demoApplication = demoApplication;
+    public Myapplicationcontroller() {
+        students.add(Bob); 
+        students.add(new Student("2020/ICT/114", "Alice", "CS", 22, 3.2));
+        students.add(new Student("2020/ICT/115", "Charlie", "AI", 24, 3.5));
     }
-	
 	@GetMapping("/msg")
 	public String mymsg() {
 		return "Hello Springboot";
