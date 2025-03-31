@@ -20,10 +20,10 @@ import com.example.demo.model.Student;
 @RequestMapping("/app")
 public class Myapplicationcontroller {
 
-	Student Bob = new Student("2020-ICT-113", "Bob", "IT", 23, 2.5);
-	Student Bib = new Student("2020-ICT-13", "Bib", "IT", 22, 2.8);
-	Student Lho = new Student("2020-ICT-103", "Lho", "IT", 22, 2.2);
-	Student Rcs = new Student("2020-ICT-03", "Rcs", "IT", 21, 2.3);
+	Student Bob = new Student("2020-ICT-113", "Bob", 21, "IT", 2.5);
+	Student Bib = new Student("2020-ICT-13", "Bib", 22, "IT", 2.8);
+	Student Lho = new Student("2020-ICT-103", "Lho", 23, "IT", 2.2);
+	Student Rcs = new Student("2020-ICT-03", "Rcs", 23, "IT", 2.3);
 
 	List<Student> students = new ArrayList<Student>();
 
