@@ -124,5 +124,11 @@ public class Myapplicationcontroller {
 		students.removeIf(student -> student.getRegNo().equals(regNo));
 		return "Student deleted successfully";
 	}
+	
+	// print all courses
+		@GetMapping("/allcourses")
+		public List<Course> getAllCourses() {
+			return courses;
+		}
 
 }
