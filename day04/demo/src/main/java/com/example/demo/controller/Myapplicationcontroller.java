@@ -25,8 +25,14 @@ public class Myapplicationcontroller {
 	Student Bib = new Student("2020-ICT-13", "Bib", 22, "IT", 2.8);
 	Student Lho = new Student("2020-ICT-103", "Lho", 23, "IT", 2.2);
 	Student Rcs = new Student("2020-ICT-03", "Rcs", 23, "IT", 2.3);
+	
+	Course c1 =  new Course("123","IT","ABC");
+	Course c2 =  new Course("321","BIO","CDE");
+	Course c3 =  new Course("132","AMC","EFG");
+	Course c4 =  new Course("143","TEC","HIJ");
 
 	List<Student> students = new ArrayList<Student>();
+	List<Course> courses= new ArrayList<Course>();
 
 	public Myapplicationcontroller() {
 		students.add(Bob);
