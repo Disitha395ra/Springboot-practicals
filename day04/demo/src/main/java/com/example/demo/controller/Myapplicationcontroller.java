@@ -2,7 +2,9 @@ package com.example.demo.controller;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -137,7 +139,12 @@ public class Myapplicationcontroller {
 		}
 	// print courses with students in same end point
 		@GetMapping("/student/courses")
-		public String getAllData() {
+		public Map<String, Object> getStudentAndCourse() {
+			Map<String, Object> response = new HashMap<>();
+		    response.put("students", students);
+		    response.put("courses", courses);
+
+		    return response;
 			
 		}
 }
