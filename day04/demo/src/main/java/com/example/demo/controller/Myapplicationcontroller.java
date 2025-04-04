@@ -39,8 +39,13 @@ public class Myapplicationcontroller {
 		students.add(Bib);
 		students.add(Lho);
 		students.add(Rcs);
+		courses.add(c1);
+		courses.add(c2);	
+		courses.add(c3);	
+		courses.add(c4);	
 	}
 
+	
 	@GetMapping("/mymsg")
 	public String myMsg() {
 		return "Hii Spring boot";
