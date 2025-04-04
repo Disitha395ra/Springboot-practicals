@@ -135,5 +135,9 @@ public class Myapplicationcontroller {
 		public List<Course> getAllCourses() {
 			return courses;
 		}
-
+	// print courses with students in same end point
+		@GetMapping("/student/courses")
+		public String getAllData() {
+			
+		}
 }
