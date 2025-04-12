@@ -1,7 +1,10 @@
 package com.example.demo.model;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 
 @Entity
@@ -16,5 +19,8 @@ public class employee {
 	
 	@ManyToOne
 	private department department;
+	
+	@ManyToMany
+	private List<project>projects;
 
 }
