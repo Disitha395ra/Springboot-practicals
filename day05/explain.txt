@@ -1,0 +1,6 @@
+Here we install 4 DependencyWhy?
+
+Spring Web	 - > Create REST APIs
+Spring Boot DevTools - > Auto-reload backend on changes
+Spring Data JPA -> 	Easily interact with MySQL using Java objects
+MySQL Driver	 - > Connect backend to MySQL database
