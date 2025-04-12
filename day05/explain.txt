@@ -4,3 +4,34 @@ Spring Web	 - > Create REST APIs
 Spring Boot DevTools - > Auto-reload backend on changes
 Spring Data JPA -> 	Easily interact with MySQL using Java objects
 MySQL Driver	 - > Connect backend to MySQL database
+
+
+////////////////////////////////////////////////
+
+One Department has many Employees
+
+Each Employee belongs to one Department
+
+{{	@OneToMany
+	private List<employee>employees;
+
+	@ManyToOne
+	private department department;	}}
+
+private List<employee>employees - >It's saying: “The list will store objects of the employee class.”
+List<employee>
+This means: “a list (like an array) that can hold multiple employee objects.”
+
+////////////////////////////////////////////////////
+
+You have two classes: Department and Employee.
+
+One Department has many Employees → @OneToMany
+
+One Employee belongs to one Department → @ManyToOne
+
+Now, we need to tell JPA: who owns the relationship?
+##### mappedBy is always used on the @OneToMany side in a bidirectional relationship. ##############
+
+////////////////////////////////////////////////////////
+
