@@ -13,6 +13,6 @@ public class project {
 	private long totalcost;
 	
 	
-	@ManyToMany
+	@ManyToMany(mappedBy="projects")
 	private List<employee> employees;
 }

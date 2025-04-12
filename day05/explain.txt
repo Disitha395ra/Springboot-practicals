@@ -35,3 +35,9 @@ Now, we need to tell JPA: who owns the relationship?
 
 ////////////////////////////////////////////////////////
 
+In ManyToMany relation we think join table as a owning table side 
+so in reverse side we have to use mappedBy function 
+
+///////////////////////////////////////////////////////
+
+✅ mappedBy should match the variable name (not the class name)
